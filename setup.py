@@ -17,7 +17,7 @@ setup(
         "python-dotenv",
         "google-adk",  # Google ADK
         "qdrant-client",  # Qdrant client for vector DB operations
-        "sentence-transformers",  # For embedding if needed
+        "openai>=1.0.0",  # Azure OpenAI client
         "mcp",  # For MCP server support
         "python-multipart",  # For form data parsing
     ],

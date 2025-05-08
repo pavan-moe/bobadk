@@ -58,9 +58,10 @@ async def run_mcp_server():
     
     async def search(query: str, limit: int = 5) -> dict:
         """Search for information using Zendesk ticket data."""
-        return search_agent.search(query, limit=limit)
-    
-    search_fn = FunctionTool(search)
+        try:
+            return search_agent.search(query, limit=limit)
+        except Exception as e:
+            return {"error": str(e)}
     
     @app.list_tools()
     async def list_tools() -> list[mcp_types.Tool]:
@@ -68,7 +69,7 @@ async def run_mcp_server():
         return [
             mcp_types.Tool(
                 name="search",
-                description="Search for information in Zendesk tickets",
+                description="Search for information in Zendesk tickets using Azure OpenAI embeddings",
                 input_schema={
                     "type": "object",
                     "properties": {

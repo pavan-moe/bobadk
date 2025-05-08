@@ -1,13 +1,13 @@
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel
 from src.agent.search_agent import SearchAgent
-from src.config.settings import settings
+# from src.config.settings import settings
 
 router = APIRouter()
 
 # Initialize the search agent with the API key from settings
 def get_search_agent():
-    return SearchAgent(api_key=settings.api_key)
+    return SearchAgent(api_key='AIzaSyCXRW9jo3rbwcxxnt-ksWJq4aeX286Gkc0')
 
 class QueryResponse(BaseModel):
     query: str
