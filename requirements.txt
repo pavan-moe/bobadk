@@ -1,0 +1,6 @@
+FastAPI
+uvicorn
+python-dotenv
+google-adk
+pydantic
+httpx

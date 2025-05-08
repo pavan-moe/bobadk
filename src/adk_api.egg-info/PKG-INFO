@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: adk-api
+Version: 0.1.0
+Summary: API for querying using the Agent Development Kit
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: FastAPI
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pydantic
+Requires-Dist: httpx
+Requires-Dist: python-dotenv
+Requires-Dist: google-adk
+Requires-Dist: qdrant-client
+Requires-Dist: sentence-transformers
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
